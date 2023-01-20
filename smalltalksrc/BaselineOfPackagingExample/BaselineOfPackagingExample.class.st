@@ -15,7 +15,7 @@ BaselineOfPackagingExample >> baseline: spec [
 
 		spec 
 			baseline: 'EmbeddedSupport' 
-			with: [ spec repository: 'github://tesonep/pharo-vm-embedded-example:pharo-11'].
+			with: [ spec repository: 'github://tesonep/pharo-vm-embedded-example:pharo-11/smalltalk-src'].
 		
 		spec package: 'PackagingExample' with: [ spec requires: #('EmbeddedSupport' 'Toplo') ].
 
