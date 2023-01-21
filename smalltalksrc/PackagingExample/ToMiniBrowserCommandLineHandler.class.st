@@ -14,8 +14,10 @@ ToMiniBrowserCommandLineHandler class >> commandName [
 ToMiniBrowserCommandLineHandler >> activate [
 
 	| space |
-	
+
 	OSWindowDriver current startUp: true.
+	EmbeddedSupport errorHandler: ESSDLMessageErrorHandler new.
+
 	space := ToMiniBrowser open.
-	space when: BlSpaceClosedEvent do: [ :e | Smalltalk snapshot: false andQuit: true ].
+	space when: BlSpaceClosedEvent do: [ :e | Smalltalk snapshot: false andQuit: true ]
 ]
