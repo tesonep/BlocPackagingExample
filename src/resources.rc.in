@@ -1,0 +1,26 @@
+#include "resources.h"
+
+IDI_PHARO_ICON ICON "@CMAKE_CURRENT_SOURCE_DIR@/src/toplo.ico"
+EMBEDDED_IMAGE RCDATA "@CMAKE_CURRENT_BINARY_DIR@/build/resources/Pharo.image"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     @VERSION_MAJOR@,@VERSION_MINOR@,0
+PRODUCTVERSION  @VERSION_MAJOR@,@VERSION_MINOR@,0
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"    // Lang=US English, CharSet=Windows Multilin
+        BEGIN
+            VALUE "CompanyName", "Toplo Example Inc\0"
+            VALUE "FileDescription", "Toplo Example\0"
+            VALUE "FileVersion", "@VM_VERSION_FILEVERSION@"
+            VALUE "LegalCopyright", "Copyright \251\0"
+            VALUE "ProductName", "Toplo Example\0"
+            VALUE "ProductVersion", "@VERSION_MAJOR@.@VERSION_MINOR@.@VERSION_PATCH@\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
